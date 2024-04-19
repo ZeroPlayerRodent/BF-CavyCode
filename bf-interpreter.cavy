@@ -1,0 +1,188 @@
+| Brainfuck interpreter in CavyCode |
+| Written by ZeroPlayerRodent 2024  |
+
+| Get BF program from user input |
+
+wheek-string "Input BF program with '!' at the end: "
+mark-territory 1
+groom-self
+eat-pellet beg-char
+groom-self
+popcorn-if 33
+  zoomies-to 1
+groom-self  
+poop
+wheek-char 10
+wheek-string "Program loaded!"
+wheek-char 10
+
+| Initialize memory tape |
+wheek-string "Initializing memory, please wait..."
+new-tunnel
+burrow-in 1
+
+| This determines how many memory cells will be initialized. |
+eat-hay 30000
+mark-territory 2
+chatter 1
+eat-pellet 0
+popcorn-if 0
+  zoomies-to 2
+wheek-char 10
+wheek-string "Memory intialized! Program starting."
+wheek-char 10 wheek-char 10
+
+| Initialize space in memory to keep track of matching brackets |  
+new-tunnel
+
+| Interpret BF code |
+mark-territory 3
+burrow-in 0
+| When "+" |
+popcorn-not 43 zoomies-to 43
+| When "-" |
+popcorn-not 45 zoomies-to 45
+| When "." |
+popcorn-not 46 zoomies-to 46
+| When "," |
+popcorn-not 44 zoomies-to 44
+| When ">" |
+popcorn-not 62 zoomies-to 62
+| When "<" |
+popcorn-not 60 zoomies-to 60
+| When "]" |
+popcorn-not 93 zoomies-to 93
+| When "[" |
+popcorn-not 91 zoomies-to 91
+mark-territory 4
+eat-pellet tunnel
+poop
+popcorn-if 33
+  zoomies-to 3
+zoomies-to 5
+
+| Execute "+" command |
+mark-territory 43
+burrow-in 1
+eat-hay 1
+popcorn-not 256
+  chatter 256
+burrow-in 0
+zoomies-to 4
+
+| Execute "-" command |
+mark-territory 45
+burrow-in 1
+chatter 1
+popcorn-not -1
+  eat-hay 256
+burrow-in 0
+zoomies-to 4
+
+| Execute "." command |
+mark-territory 46
+burrow-in 1
+wheek-char tunnel
+burrow-in 0
+zoomies-to 4
+
+| Execute "," command |
+mark-territory 44
+burrow-in 1
+chatter tunnel
+eat-hay beg-char
+burrow-in 0
+zoomies-to 4
+
+| Execute ">" command |
+mark-territory 62
+burrow-in 1
+eat-pellet tunnel
+poop
+burrow-in 0
+zoomies-to 4
+
+| Execute "<" command |
+mark-territory 60
+burrow-in 1
+groom-self
+eat-pellet tunnel
+poop
+groom-self
+burrow-in 0
+zoomies-to 4
+
+| Execute "]" command |
+mark-territory 93
+burrow-in 2
+eat-hay 1
+burrow-in 1
+popcorn-not 0
+  zoomies-to 100
+mark-territory 101
+burrow-in 0
+groom-self
+eat-pellet tunnel
+poop
+groom-self
+
+| Find matching bracket |
+popcorn-if 91
+  zoomies-to -1
+burrow-in 2
+chatter 1
+burrow-in 0
+mark-territory -1
+popcorn-if 93
+  zoomies-to -2
+burrow-in 2
+eat-hay 1
+burrow-in 0
+mark-territory -2
+burrow-in 2
+popcorn-if 0
+  zoomies-to 101
+mark-territory 100
+burrow-in 2
+chatter tunnel
+burrow-in 0
+zoomies-to 4
+
+| Execute "[" command |
+mark-territory 91
+burrow-in 2
+eat-hay 1
+burrow-in 1
+popcorn-if 0
+  zoomies-to 102
+mark-territory 103
+burrow-in 0
+eat-pellet tunnel
+poop
+
+| Find matching bracket |
+popcorn-if 91
+  zoomies-to -3
+burrow-in 2
+eat-hay 1
+burrow-in 0
+mark-territory -3
+popcorn-if 93
+  zoomies-to -4
+burrow-in 2
+chatter 1
+burrow-in 0
+mark-territory -4
+burrow-in 2
+popcorn-if 0
+  zoomies-to 103
+mark-territory 102
+burrow-in 2
+chatter tunnel
+burrow-in 0
+zoomies-to 4
+
+| End of BF program |
+mark-territory 5
+wheek-char 10 wheek-char 10
+wheek-string "Program terminated."
