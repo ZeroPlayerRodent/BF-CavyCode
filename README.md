@@ -1,6 +1,8 @@
 # BF-CavyCode
 Is a classic 8-bit [Brainfuck](https://en.wikipedia.org/wiki/Brainfuck) interpreter implemented in [CavyCode](https://github.com/ZeroPlayerRodent/cavycode).
 
+Included as a bonus is a bare-bones Brainfuck to CavyCode translator written in Python: [bf-to-cavycode.py](https://github.com/ZeroPlayerRodent/BF-CavyCode/blob/main/bf-to-cavycode.py)
+
 ## How to use
 You can compile or run [bf-interpreter.cavy](https://github.com/ZeroPlayerRodent/BF-CavyCode/blob/main/bf-interpreter.cavy) from source, or you can run the pre-compiled [bf-interpreter.lisp](https://github.com/ZeroPlayerRodent/BF-CavyCode/blob/main/bf-interpreter.lisp).
 
