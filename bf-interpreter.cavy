@@ -2,7 +2,6 @@
 | Written by ZeroPlayerRodent 2024  |
 
 | Get BF program from user input |
-
 wheek-string "Input BF program with '!' at the end: "
 mark-territory 1
 groom-self
